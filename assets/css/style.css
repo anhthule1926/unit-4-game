@@ -1,4 +1,11 @@
-
+.header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: crimson;
+    margin: auto;
+    padding: 15px;
+}
 
 
 
