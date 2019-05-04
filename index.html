@@ -12,19 +12,53 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body background="assets/images/843084-nice-colorful-backgrounds-2560x1600-1080p.jpg">
+ 
     <div class= "header">
-        <h1>Crystal Collector Game</h1>
+        <h1><b>Crystal Collector Game</b></h1>
     </div>
 
-    <h2 >Rules of the Game</h2>
-        <p>You will be given a random number at the start of the game.  There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score. You win the game by matching your total score to the ramdom number, you lose the game if your total score goes above the random number.</p>
-        <p>The value of each crystal is hidden from you until you click on it.  Each time when the game starts, the game will change the values of each crystal.</p>
+    <div class="container">
+        <div class="row">
+			<div class="col-lg-12 directions">
+                <p>You will be given a random number at the start of the game.</p>
+                <p> There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score</p>
+                <p> You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number. The value of each crystal is hidden from you until you click on it.</p>
+                <p> Each time when the game starts, the game will change the values of each crystal.</p>
+            </div>
+        </div>
+        <div class="row">
+			<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                <button><img src="assets/images/blue.jpg" id="blue" width="100px" height="100px"></button>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                <button><img src="assets/images/green.jpg" id="green" width="100px" height="100px"></button>
+             </div>  
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                <button><img src="assets/images/red.jpg" id="red" width="100px" height="100px"></button>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                <button><img src="assets/images/yellow.jpg" id="yellow" width="100px" height="100px"></button>
+            </div>
+        </div>
 
-    <div class="buttons">
-        <button><img src="assets/images/blue.jpg" id="blue" width="100px" height="100px"></button>
-        <button><img src="assets/images/green.jpg" id="green" width="100px" height="100px"></button>
-        <button><img src="assets/images/red.jpg" id="red" width="100px" height="100px"></button>
-        <button><img src="assets/images/yellow.jpg" id="yellow" width="100px" height="100px"></button>
+        <div class="row text-center">
+            <div class="col-lg-4 total">
+                <h3>Target Score:</h3>
+                <h3 id="targetScore"></h3>
+            </div>
+	        <div class="col-lg-4 total">
+                <h3>Total Score:</h3>
+                <h3 id="totalScore"></h3>
+            </div>
+		    <div class="col-lg-4 button">
+			    <h3 id="playAgain"></h3>
+				    <button type="button" class="btn btn-light btn-lg">PLAY AGAIN</button>
+		    </div>
+		    <div class="col-lg-4 scores">
+			    <p class="score">WINS: <span id="wins"></span></p> 
+                <p class="score">LOSSES: <span id="losses"></span></p>
+            </div>
+        </div>
     </div>
 </body>
 
