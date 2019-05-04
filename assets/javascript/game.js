@@ -8,18 +8,27 @@ $(document).ready(function(){//I need jQuery to run!
     var greenNum;
     var yelloowNum;
     
-    function(){
-        var targetScore = Math.floor(Math.random() * (120 - 19)) +19;
+    function newNumbers(){
+        var targetScore = Math.floor(Math.random() * 102) + 19;
 	    var redNumber = Math.floor(Math.random()*12);
 	    var yellowNumber = Math.floor(Math.random()*12);
 	    var blueNumber = Math.floor(Math.random()*12);
 	    var greenNumber = Math.floor(Math.random()*12);
     }
-	$("#button-red").attr('value', redNumber);
-	$("#button-blue").attr('value', blueNumber);
-	$("#button-green").attr('value', greenNumber);
-	$("#button-yellow").attr('value', yellowNumber);
 
+    function newGame(){
+        newNumbers();
+        totalScore = 0;
+        $("#targetScore").text(targetScore);
+        $("totalScore").text(totalScore);
+	    $("#button-red").attr('value', redNumber);
+	    $("#button-blue").attr('value', blueNumber);
+	    $("#button-green").attr('value', greenNumber);
+        $("#button-yellow").attr('value', yellowNumber);
+        $("#wins").text(wins);
+        $("#losses").text(losses);
+        $("#winOrLose").text(winOrLose);
+    }
 	$('.crystal-button').click(function(){
 
 		console.log($(this).attr('value'));4n
