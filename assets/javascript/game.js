@@ -1,26 +1,39 @@
 $(document).ready(function(){//I need jQuery to run!
-    var targetScore, totalScore, red, yellow, blue, green;
-
-    var randNumber = Math.floor(Math.random() * 120 + 19);
-    $('#randNum').html(randNumber);
-
-    //each crystal has a hidden value i.e. random number between1 and 12
-    var red = Math.floor(Math.random() * 12) + 1;
-    var green = Math.floor(Math.random() * 12) + 1;
-    var yellow = Math.floor(Math.random() * 12) + 1;
-    var blue = Math.floor(Math.random() * 12) + 1;
-
-    //player clicks the crystals to display value to totScore
-    var wins = 0; //#wins
-    var losses = 0;  //#losses
-
+	var totalScore, targetScore, redNumber, yellowNumber, blueNumber, greenNumber;
+    var targetScore;
     var totalScore = 0;
-    $('#totalScore').text(totalScore);
+    var wims = 0;
+    var losses = 0;
+    var redNumber;
+    var yellowNumber;
+    var blueNumber;
+    var greenNumber;
 
-    function win() {
-        wins = wins + 1;
-        $('#wins').text(wins);
-         reset();
-    }
 
-  
+	var resetGame = function(){
+		targetScore = Math.floor(Math.random()*101 + 19);
+		totalScore = 0;
+		redNumber = Math.floor(Math.random()*12);
+		yellowNumber = Math.floor(Math.random()*12);
+		blueNumber = Math.floor(Math.random()*12);
+		greenNumber = Math.floor(Math.random()*12);
+	}
+
+	resetGame();
+ 
+	
+
+	$("#button-red").attr('value', redNumber);
+	$("#button-yellow").attr('value', yellowNumber);
+	$("#button-blue").attr('value', blueNumber);
+	$("#button-green").attr('value', greenNumber);
+
+
+	$('.crystal-button').click(function(){
+		current += parseInt($(this).attr('value'));
+		console.log(current);
+	});
+
+
+
+});
