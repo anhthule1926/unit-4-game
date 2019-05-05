@@ -47,7 +47,7 @@ var blueNumber;
 
 	newGame();
 
-	$(".crystalimg").on("click", function() {
+	$(".crystals").on("click", function() {
 		if (totalScore >= targetScore) {
 			return;
 		}
