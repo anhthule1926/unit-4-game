@@ -1,50 +1,26 @@
 $(document).ready(function(){//I need jQuery to run!
-    var targetScore;
-    var totalScore = 0
-    var wins = 0;
-    var losses = 0;
-    var redNum;
-    var blueNum;
-    var greenNum;
-    var yelloowNum;
-    
-    function newNumbers(){
-        var targetScore = Math.floor(Math.random() * 102) + 19;
-	    var redNumber = Math.floor(Math.random()*12);
-	    var yellowNumber = Math.floor(Math.random()*12);
-	    var blueNumber = Math.floor(Math.random()*12);
-	    var greenNumber = Math.floor(Math.random()*12);
+    var targetScore, totalScore, red, yellow, blue, green;
+
+    var randNumber = Math.floor(Math.random() * 120 + 19);
+    $('#randNum').html(randNumber);
+
+    //each crystal has a hidden value i.e. random number between1 and 12
+    var red = Math.floor(Math.random() * 12) + 1;
+    var green = Math.floor(Math.random() * 12) + 1;
+    var yellow = Math.floor(Math.random() * 12) + 1;
+    var blue = Math.floor(Math.random() * 12) + 1;
+
+    //player clicks the crystals to display value to totScore
+    var wins = 0; //#wins
+    var losses = 0;  //#losses
+
+    var totalScore = 0;
+    $('#totalScore').text(totalScore);
+
+    function win() {
+        wins = wins + 1;
+        $('#wins').text(wins);
+         reset();
     }
 
-    function newGame(){
-        newNumbers();
-        totalScore = 0;
-        $("#targetScore").text(targetScore);
-        $("totalScore").text(totalScore);
-	    $("#button-red").attr('value', redNumber);
-	    $("#button-blue").attr('value', blueNumber);
-	    $("#button-green").attr('value', greenNumber);
-        $("#button-yellow").attr('value', yellowNumber);
-        $("#wins").text(wins);
-        $("#losses").text(losses);
-        $("#winOrLose").text(winOrLose);
-    }
-	$('.crystal-button').click(function(){
-
-		console.log($(this).attr('value'));4n
-
-    for(var i = 0; 1 < 4; i++){
-        var crystal = $("<div>");
-
-        $(".cystals").crystals();
-        console.log(Crystal)
-    }
-
-    $("#wins").html(wins);
-    $("#losses").html(losses);
-    $("#total").html(totalScore);
-
-	});
-
-});
-
+  
