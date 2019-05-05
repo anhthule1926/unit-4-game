@@ -4,19 +4,19 @@ var targetScore;
 var totalScore = 0;
 var wins = 0;
 var losses = 0;
-var redNumber;
-var yellowNumber;
-var greenNumber;
-var blueNumber;
+var red;
+var yellow;
+var green;
+var blue;
 
 
 
 	function newNumbers() {
-		magicNumber = Math.floor(Math.random() * 101 + 19);
-		redNumber = Math.floor(Math.random() * 12);
-		yellowNumber = Math.floor(Math.random() * 12);
-		greenNumber = Math.floor(Math.random() * 12);
-		blueNumber = Math.floor(Math.random() * 12);
+		targetScore = Math.floor(Math.random() * 101 + 19);
+		red = Math.floor(Math.random() * 12);
+		yellow = Math.floor(Math.random() * 12);
+		green = Math.floor(Math.random() * 12);
+		blue = Math.floor(Math.random() * 12);
 	}
 
 	function newGame() {
@@ -24,10 +24,10 @@ var blueNumber;
 		totalScore = 0;
 		$("#targetScore").text(targetScore);
 		$("#totalScore").text(totalScore);
-		$("#redNumber").attr("value", redNumber);
-		$("#yellowNumber").attr("value", yellowNumber);
-		$("#greenNumber").attr("value", greenNumber);
-		$("#blueNumber").attr("value", blueNumber);
+		$("#red").attr("value", red);
+		$("#yellow").attr("value", yellow);
+		$("#green").attr("value", green);
+		$("#blue").attr("value", blue);
 		$("#wins").text(wins);
 		$("#losses").text(losses);
 		$("#winOrLose").text("");
